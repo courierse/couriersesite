@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    height: 100vh;
+    padding-top: 90px;
+  }
+  
+  .cards {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .card {
+    background-color: #5f7c9a;
+    padding: 20px;
+    border: 1px solid #4890fd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional subtle shadow by default */
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  }
+  
+  .card:hover {
+    background-color: #2376b99c;
+    box-shadow: 0 0 15px 5px rgba(77, 85, 156, 0.7); /* Glowing effect */
+
+  }
+  
+  .map {
+    width: 50%;
+    height: 100%;
+  }
+  
