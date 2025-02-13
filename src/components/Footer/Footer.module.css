@@ -91,29 +91,29 @@
 /* Mobile view adjustments */
 @media (max-width: 767px) {
   .footerContainer {
-    grid-template-columns: 1fr; /* Single column layout for mobile */
+    grid-template-columns: 1fr; 
     text-align: center;
   }
 
   .socialIcons {
-    gap: 10px; /* Reduce gap between social icons */
+    gap: 10px; 
   }
 
   .icon {
-    font-size: 2rem; /* Increase icon size for mobile visibility */
+    font-size: 2rem; 
   }
 
   .logo {
-    width: 60px; /* Slightly smaller logo on mobile */
+    width: 60px; 
   }
 
   .navSection,
   .contactSection,
   .socialSection {
-    margin-bottom: 20px; /* Add some spacing between sections */
+    margin-bottom: 20px;
   }
 
   .description {
-    font-size: 1rem; /* Smaller text for mobile */
+    font-size: 1rem; 
   }
 }

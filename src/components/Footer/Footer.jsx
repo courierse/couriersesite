@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Import icons for social media
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaMailBulk, FaMailchimp, FaTextHeight } from 'react-icons/fa'; // Import icons for social media
 
 const Footer = () => {
   return (
@@ -40,10 +40,10 @@ const Footer = () => {
         <div className={styles.socialSection}>
           <h4 className={styles.navTitle}>Follow Us</h4>
           <div className={styles.socialIcons}>
-            <a href="#"><FaFacebook className={styles.icon} /></a>
-            <a href="#"><FaTwitter className={styles.icon} /></a>
+            <a href="#"><FaPhone className={styles.icon} /></a>
+            <a href="#"><FaMailBulk className={styles.icon} /></a>
             <a href="#"><FaInstagram className={styles.icon} /></a>
-            <a href="#"><FaLinkedin className={styles.icon} /></a>
+            {/* <a href="#"><FaLinkedin className={styles.icon} /></a> */}
           </div>
         </div>
       </div>
