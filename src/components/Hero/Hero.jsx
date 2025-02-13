@@ -16,7 +16,7 @@ export const Hero = () => {
         Courierse gets your products there!"
 
         </p>
-        <a href="mailto:info.courierse#gmail.com" className={styles.contactBtn}>
+        <a href="tel:+917042028577" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>

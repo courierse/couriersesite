@@ -33,7 +33,7 @@
       rgba(255, 255, 255, 0) 120%
     );
     -webkit-text-fill-color: transparent;
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text;
   }
   
   .description {
@@ -46,6 +46,7 @@
     text-decoration: none;
     background-color: var(--color-primary);
     color: white;
+    border: 2px solid #ffffff; 
     border-radius: 50px;
     font-size: 18px;
     font-weight: 600;
@@ -53,6 +54,14 @@
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     margin-top: 10px; 
     z-index: 1;
+    transition: all 0.3s ease;
+    
+  }
+  .contactBtn:hover {
+    background-color: #3301ff; /* Background color change on hover */
+    color: #ffffff; /* Text color change on hover */
+    border-color: #6fb5ef; /* Border color change on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
   }
   
   .heroImg {
@@ -129,38 +138,38 @@
     }
     .container {
       flex-direction: column-reverse;
-      padding: 20px; /* Add padding for mobile */
+      padding: 20px; /* padding for mobile */
       margin-left: 0;
       margin-right: 0;
     }
   
     .content {
       align-items: center;
-      width: 100%; /* Make content take full width */
+      width: 100%;
     }
   
     .title {
-      font-size: 32px; /* Reduce font size for mobile */
+      font-size: 32px; 
       text-align: center;
     }
   
     .description {
-      font-size: 18px; /* Reduce font size for mobile */
+      font-size: 18px;
       text-align: center;
     }
   
     .contactBtn {
-      font-size: 16px; /* Reduce font size for button */
+      font-size: 16px; 
       padding: 10px 20px;
     }
   
     .heroImg {
-      width: 80%; /* Make hero image smaller for mobile */
+      width: 80%; 
       margin-top: 20px;
     }
     .mobileGif {
       display: block;
-      width: 100%; /* Full width for mobile */
+      width: 100%; 
       margin-top: -20px;
     }
   }

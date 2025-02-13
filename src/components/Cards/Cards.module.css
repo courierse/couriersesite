@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f0;
+}
+
+body {
+  background-color: #0b0d15;
+}
+
+.centeredTitle {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.3rem;
+  color: #a2a5b3;
+  max-width: 80%;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #1c1f2b;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 2px solid rgba(217, 255, 0, 0.2);
+}
+
+/* Glowing effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 0, 204, 0.5), rgba(51, 51, 255, 0.5), rgba(0, 255, 204, 0.5));
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s ease, background-position 0.5s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+  background-position: 100% 0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 0, 204, 0.7), 0 0 50px rgba(51, 51, 255, 0.7), 0 0 75px rgba(0, 255, 204, 0.7);
+}
+
+.card h1 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Modal styles (if needed) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+}
+
+.modalContent {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}

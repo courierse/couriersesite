@@ -1,47 +1,95 @@
-import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import styles from './Maps.module.css';
+import React, { useState, useRef } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import styles from "./Maps.module.css";
 
 const locations = [
-  { name: 'Location A', coords: [51.505, -0.09] },
-  { name: 'Location B', coords: [51.51, -0.1] },
-  { name: 'Location C', coords: [51.52, -0.12] },
-  { name: 'Location D', coords: [51.53, -0.08] },
-  { name: 'Location E', coords: [51.54, -0.13] },
-  { name: 'Location F', coords: [51.55, -0.11] },
-  { name: 'Location G', coords: [51.56, -0.14] },
-  { name: 'Location H', coords: [51.57, -0.15] },
-  { name: 'Location I', coords: [51.58, -0.16] }
+  { name: "Ecotech III", coords: [28.5396703, 77.3858067] },
+  { name: "Ecotech II", coords: [28.5868298, 77.321627] },
+  { name: "Ecotech I", coords: [28.6228536, 77.3754433] },
+  { name: "Surajpur", coords: [28.6059879, 77.3477137] },
+  { name: "Sector 63", coords: [28.5152067, 77.4546359] },
+  { name: "Sector 9", coords: [28.5390701, 77.4440743] },
+  { name: "Sector 58", coords: [28.497186, 77.4597304] },
+  { name: "Knowledge Park", coords: [28.5720797, 77.3205621] },
+  { name: "Noida Phase 2", coords: [28.4721505, 77.4933512] },
 ];
 
+const ChangeMapView = ({ coords }) => {
+  const map = useMap();
+  map.setView(coords, 13, { animate: true });
+  return null;
+};
+
 const Maps = () => {
-  const [activeLocation, setActiveLocation] = useState(locations[0]);
+  const [activeLocation, setActiveLocation] = useState(null);
+  const popupRefs = useRef([]);
+
+  // Initialize popupRefs with null values
+  popupRefs.current = locations.map(() => null);
+
+  const handleCardClick = (location, index) => {
+    setActiveLocation(location);
+    if (popupRefs.current[index]) {
+      popupRefs.current[index].openPopup();
+    }
+  };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.cards}>
-        {locations.map((location, index) => (
-          <div
-            key={index}
-            className={styles.card}
-            onClick={() => setActiveLocation(location)}
+    <section className={styles.container} id="mapsSection">
+      <h2 className={styles.title}>Our Zones</h2>
+      <div className={styles.content}>
+        {/* Map Container */}
+        <div className={styles.map}>
+          <MapContainer
+            center={[28.5501, 77.4003]} // Default center
+            zoom={10}
+            style={{ height: "100%", width: "100%" }}
           >
-            {location.name}
-          </div>
-        ))}
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+            {/* Markers for all locations */}
+            {locations.map((location, index) => (
+              <Marker
+                key={index}
+                position={location.coords}
+                ref={(el) => (popupRefs.current[index] = el)}
+                eventHandlers={{
+                  click: () => {
+                    setActiveLocation(location);
+                  },
+                }}
+              >
+                <Popup>{location.name}</Popup>
+              </Marker>
+            ))}
+
+            {/* Center map on selected location */}
+            {activeLocation && <ChangeMapView coords={activeLocation.coords} />}
+          </MapContainer>
+        </div>
+
+        {/* Cards Container */}
+        <div className={styles.cards}>
+          {locations.map((location, index) => (
+            <div
+              key={index}
+              className={styles.card}
+              onClick={() => handleCardClick(location, index)}
+              role="button" // Improve accessibility
+              tabIndex={0} // Make cards focusable
+              onKeyPress={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  handleCardClick(location, index);
+                }
+              }}
+            >
+              {location.name}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className={styles.map}>
-        <MapContainer center={activeLocation.coords} zoom={13} style={{ height: '100%', width: '100%' }}>
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={activeLocation.coords}>
-            <Popup>{activeLocation.name}</Popup>
-          </Marker>
-        </MapContainer>
-      </div>
-    </div>
+    </section>
   );
 };
 

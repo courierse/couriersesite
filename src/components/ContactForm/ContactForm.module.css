@@ -1,0 +1,105 @@
+.contactSection {
+    padding: 50px;
+    background: linear-gradient(
+      90deg,
+      rgb(2, 22, 43) 70%,
+      rgba(255, 255, 255, 0) 120%
+    );
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  
+  .contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #18212d;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Glowing border */
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  
+  .contactForm:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1); /* Stronger glow on hover */
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.8); /* Glowing border on focus */
+    outline: none;
+  }
+  
+  .textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #14c6e6;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(20, 198, 230, 0.8); /* Button glow */
+  }
+  
+  .submitButton:hover {
+    background-color: #004bbd;
+    box-shadow: 0 0 15px rgba(20, 198, 230, 1); /* Stronger glow on hover */
+  }
+  .successMessage {
+    color: #00ff00;  /* Green color for success */
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .errorMessage {
+    color: #ff0000;  /* Red color for error */
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
