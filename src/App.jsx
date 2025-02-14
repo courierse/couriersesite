@@ -6,23 +6,34 @@ import Cards from './components/Cards/Cards';
 import ContactForm from './components/ContactForm/ContactForm';
 import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
-// import Hero from "./components/Hero/Hero";
-
-
 
 function App() {
 
   return (
     <div className={styles.App}>
-    <Navbar/>
-   <Hero/>
-<Maps/>
-<Cards/>
-<ContactForm/>
-   <Faq/>
-   <Footer/>
+      <section id="navs">
+        <Navbar />
+      </section>
+      <section id="Hero">
+        <Hero />
+      </section>
+      <section id="maps">
+        <Maps />
+      </section>
+      <section id="cards">
+        <Cards />
+      </section>
+      <section id="contactus">
+        <ContactForm />
+      </section>
+      <section id="faq">
+        <Faq />
+      </section>
+      <section id="footer">
+        <Footer />
+      </section>
     </div>
   )
 }
 
-export default App
+export default App;

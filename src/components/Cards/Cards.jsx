@@ -4,7 +4,7 @@ import styles from "./Cards.module.css";
 const Cards = () => {
   return (
     <div>
-      <h1 className={styles.centeredTitle}>How it Works?</h1>
+      <h1 className={styles.centeredTitle}>How We Work?</h1>
       <p className={styles.subtitle}>
         Courierse provides efficient, affordable delivery solutions for manufacturers using a strategically located fleet.
       </p>

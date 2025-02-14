@@ -5,19 +5,16 @@ export const Hero = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <h1 className={styles.title}>
-          Moving Your Goods with Care here and there.....
+         Save Big with Courierse – Efficient and Affordable Deliveries
         </h1>
         <p className={styles.description}>
-        Manufacturing goods, we’re here to transport,
-        With our own trucks, it’s a seamless report.
-        From one spot to the next, we’re on track,
-        Reliable, fast, we’ve always got your back.
-        Multi-route deliveries, smooth and fair,
-        Courierse gets your products there!"
+        "Why pay more? With Courierse, save on every score!<br />
+Seamless routes, cost-effective too—deliver more for less, it's what we do!
+Our trucks are set to make it quick, saving you time with every trip!"
 
         </p>
         <a href="tel:+917042028577" className={styles.contactBtn}>
-          Contact Me
+          Place Your Delivery
         </a>
       </div>
     {/* For Desktop View */}

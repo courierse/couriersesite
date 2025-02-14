@@ -1,14 +1,17 @@
 @import "../../vars.css";
 
-
 .navbar {
-  position: relative;
+  position: fixed; /* Change from relative to fixed */
+  top: 0; /* Stick it to the top of the page */
+  left: 0;
+  width: 100%; /* Ensure the navbar spans the full width */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 10px 10%; /* Adjust padding */
+  z-index: 1000; /* Higher z-index to stay on top of other content */
+  background-color: rgb(32, 39, 133); /* Add background color to avoid transparency */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 .title {
@@ -17,7 +20,6 @@
   text-decoration: none;
   color: var(--color-text);
 }
-
 
 .menuBtn {
   display: none;
@@ -34,15 +36,15 @@
 }
 
 .menuItems a {
+  color: black;
   text-decoration: none;
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
   position: relative;
 }
+
 /* hover effect */
-
-
 .menuItems a::after {
   content: "";
   position: absolute;
@@ -51,14 +53,13 @@
   display: block;
   border-radius: 50px;
   margin-top: 5px;
-  background: rgb(0, 0, 255); /* Color of the underline */
+  background: rgb(255, 255, 255); /* Color of the underline */
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 
 .menuItems a:hover::after {
   width: 100%; /* Expand underline on hover */
 }
-
 
 @media screen and (max-width: 830px) {
   .navbar {

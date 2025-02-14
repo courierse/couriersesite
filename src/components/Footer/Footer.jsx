@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaMailBulk, FaMailchimp, FaTextHeight } from 'react-icons/fa'; // Import icons for social media
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaMailBulk, FaMailchimp, FaTextHeight, FaEnvelope } from 'react-icons/fa'; // Import icons for social media
 
 const Footer = () => {
   return (
@@ -20,10 +20,10 @@ const Footer = () => {
         <div className={styles.navSection}>
           <h4 className={styles.navTitle}>Quick Links</h4>
           <ul className={styles.navList}>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#Hero">Home</a></li>
+            <li><a href="#maps">Our Zones</a></li>
+            <li><a href="#cards">How we Work?</a></li>
+            <li><a href="#contactus">Get in touch</a></li>
           </ul>
         </div>
 
@@ -40,10 +40,12 @@ const Footer = () => {
         <div className={styles.socialSection}>
           <h4 className={styles.navTitle}>Follow Us</h4>
           <div className={styles.socialIcons}>
-            <a href="#"><FaPhone className={styles.icon} /></a>
-            <a href="#"><FaMailBulk className={styles.icon} /></a>
-            <a href="#"><FaInstagram className={styles.icon} /></a>
-            {/* <a href="#"><FaLinkedin className={styles.icon} /></a> */}
+            <a href="tel:+917042028577"><FaPhone className={styles.icon} /></a>
+            <a href="mailto:info.courierse@gmail.com"><FaEnvelope className={styles.icon} /></a>
+            <a href="https://www.instagram.com/courierse.co" target="_blank" rel="noopener noreferrer">
+  <FaInstagram className={styles.icon} />
+</a>
+
           </div>
         </div>
       </div>
