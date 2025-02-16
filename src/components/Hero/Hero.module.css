@@ -11,6 +11,66 @@
     margin-right: 10%;
    
   }
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between cards and button */
+    width: 100%;
+    gap: 20px; /* Space between the two cards */
+  }
+  
+  .featureCard {
+    background: linear-gradient(135deg, #3301ff, #6fb5ef); /* Gradient background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(8, 45, 255, 0.836), 0 0 40px rgba(0, 88, 252, 0.75); /* Always-glowing shadow */
+    flex: 1;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Glowing border always present */
+  }
+  
+  .featureCard:before {
+    content: "";
+    position: absolute;
+    top: -5px; 
+    left: -5px; 
+    right: -5px; 
+    bottom: -5px; 
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 20px; /* Soft rounding for glow */
+    opacity: 0.7;
+    filter: blur(10px);
+    z-index: -1;
+  }
+  
+  .featureTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .featureDescription {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  @media screen and (max-width: 830px) {
+    .features {
+      flex-direction: row; /* Keeping cards in one row */
+      gap: 10px;
+    }
+  
+    .featureCard {
+      width: 50%; /*equal width on mobile */
+    }
+  }
+  
   
   .highlight {
     color: #ff5722; /* Customize your color */

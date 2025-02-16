@@ -9,11 +9,11 @@ const Footer = () => {
         {/* Logo  */}
         <div className={styles.logoSection}>
  <img
-   src="/assets/Footer/CourierSe.com logo.png"
+   src="/assets/Footer/heroimage.png"
   alt="Order"
   className={styles.logo}
 />
-          <p className={styles.description}>Efficient Delivery Services</p>
+          <p className={styles.description}>दाम आधा - काम ज्यादा!</p>
         </div>
 
         {/* Navigation Section */}

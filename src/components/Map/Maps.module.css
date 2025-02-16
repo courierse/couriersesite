@@ -101,7 +101,7 @@
   .cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     gap: 6px;
     padding: 10px;
     margin-bottom: 20px;
@@ -109,7 +109,7 @@
 
   .card {
     height: auto; 
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1; /* Equal width and height */
     margin-top: 0;
     padding: 10px;
   }
@@ -120,3 +120,24 @@
     margin-right: 5%;
   }
 }
+
+/* Adjustments for smaller mobile devices like iPhone SE */
+@media (max-width: 375px) {
+  .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Make cards fit within the container */
+    gap: 5px;
+  }
+
+  .card {
+    padding: 10px; /* Slightly reduce padding for smaller screens */
+    height: auto;
+    aspect-ratio: 1 / 1; /* Keep square ratio */
+  }
+
+  .container {
+    padding: 15px; /* Reduce padding to accommodate smaller screens */
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+

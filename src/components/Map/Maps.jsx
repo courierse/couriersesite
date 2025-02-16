@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import L from "leaflet"; 
 import "leaflet/dist/leaflet.css";
 import styles from "./Maps.module.css";
+
+import customPin from "/assets/hero/map-pin.png";
 
 const locations = [
   { name: "Ecotech III", coords: [28.5396703, 77.3858067] },
@@ -15,9 +18,16 @@ const locations = [
   { name: "Noida Phase 2", coords: [28.4721505, 77.4933512] },
 ];
 
+const customIcon = L.icon({
+  iconUrl: customPin,
+  iconSize: [45, 45], 
+  iconAnchor: [16, 32], 
+  popupAnchor: [0, -32], 
+});
+
 const ChangeMapView = ({ coords }) => {
   const map = useMap();
-  map.setView(coords, 13, { animate: true });
+  map.setView(coords, 12, { animate: true });
   return null;
 };
 
@@ -25,7 +35,6 @@ const Maps = () => {
   const [activeLocation, setActiveLocation] = useState(null);
   const popupRefs = useRef([]);
 
-  // Initialize popupRefs with null values
   popupRefs.current = locations.map(() => null);
 
   const handleCardClick = (location, index) => {
@@ -53,6 +62,7 @@ const Maps = () => {
               <Marker
                 key={index}
                 position={location.coords}
+                icon={customIcon}
                 ref={(el) => (popupRefs.current[index] = el)}
                 eventHandlers={{
                   click: () => {
@@ -76,8 +86,8 @@ const Maps = () => {
               key={index}
               className={styles.card}
               onClick={() => handleCardClick(location, index)}
-              role="button" // Improve accessibility
-              tabIndex={0} // Make cards focusable
+              role="button" 
+              tabIndex={0}
               onKeyPress={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   handleCardClick(location, index);
