@@ -1,4 +1,68 @@
 @import "../../vars.css";
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(92, 114, 162, 0.644);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 0 25px rgb(255, 0, 0);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.modalMessage {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.modalCloseBtn {
+  background-color: #e02323;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modalCloseBtn:hover {
+  background-color: #d32f2f;
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rest of your styles */
 
 .container {
     position: relative;
@@ -14,13 +78,13 @@
   .features {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Space between cards and button */
+    margin-bottom: 20px; 
     width: 100%;
-    gap: 20px; /* Space between the two cards */
+    gap: 20px; 
   }
   
   .featureCard {
-    background: linear-gradient(135deg, #3301ff, #6fb5ef); /* Gradient background */
+    background: linear-gradient(135deg, #3301ff, #6fb5ef); 
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(8, 45, 255, 0.836), 0 0 40px rgba(0, 88, 252, 0.75); /* Always-glowing shadow */
@@ -42,7 +106,7 @@
     right: -5px; 
     bottom: -5px; 
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
-    border-radius: 20px; /* Soft rounding for glow */
+    border-radius: 20px;
     opacity: 0.7;
     filter: blur(10px);
     z-index: -1;
@@ -121,10 +185,10 @@
     
   }
   .contactBtn:hover {
-    background-color: #3301ff; /* Background color change on hover */
-    color: #ffffff; /* Text color change on hover */
-    border-color: #6fb5ef; /* Border color change on hover */
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: #3301ff; 
+    color: #ffffff;
+    border-color: #6fb5ef; 
+    transform: translateY(-5px); 
   }
   
   .heroImg {
@@ -180,21 +244,7 @@
     z-index: 0;
   }
   
-  /* @media screen and (max-width: 830px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-  
-    .content {
-      align-items: center;
-      width: 100%;
-    }
-  
-    .heroImg {
-      width: 100%;
-    }
-  }
-   */
+
    @media screen and (max-width: 830px) {
     .desktopGif {
       display: none;

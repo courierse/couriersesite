@@ -6,16 +6,17 @@ import styles from "./Maps.module.css";
 
 import customPin from "/assets/hero/map-pin.png";
 
+28.4711971,77.4875385
 const locations = [
-  { name: "Ecotech III", coords: [28.5396703, 77.3858067] },
-  { name: "Ecotech II", coords: [28.5868298, 77.321627] },
-  { name: "Ecotech I", coords: [28.6228536, 77.3754433] },
-  { name: "Surajpur", coords: [28.6059879, 77.3477137] },
-  { name: "Sector 63", coords: [28.5152067, 77.4546359] },
-  { name: "Sector 9", coords: [28.5390701, 77.4440743] },
-  { name: "Sector 58", coords: [28.497186, 77.4597304] },
-  { name: "Knowledge Park", coords: [28.5720797, 77.3205621] },
-  { name: "Noida Phase 2", coords: [28.4721505, 77.4933512] },
+  { name: "Ecotech III", coords: [28.5408514, 77.4567558] },
+  { name: "Ecotech II", coords: [28.4971886,77.4597304] },
+  { name: "Ecotech I", coords: [28.4381356, 77.5641937 ] },
+  { name: "Surajpur", coords: [28.5138343, 77.4794697] },
+  { name: "Sector 63", coords: [28.6247006, 77.3804217] },
+  { name: "Sector 9", coords: [ 28.5872325, 77.3256343] },
+  { name: "Sector 58", coords: [28.6068774, 77.3577906] },
+  { name: "Knowledge Park", coords: [28.4711971, 77.4875385] },
+  { name: "Noida Phase 2", coords: [28.5328865, 77.4059268] },
 ];
 
 const customIcon = L.icon({

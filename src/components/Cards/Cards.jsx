@@ -24,7 +24,7 @@ const Cards = () => {
     <div>
       <h1 className={styles.centeredTitle}>How We Work?</h1>
       <p className={styles.subtitle}>
-        Courierse provides efficient, affordable delivery solutions for manufacturers using a strategically located fleet.
+        CourierSe provides efficient, affordable delivery solutions for manufacturers using a strategically located fleet.
       </p>
 
       <div className={styles.cardContainer}>
@@ -37,7 +37,7 @@ const Cards = () => {
             className={styles.icon}
           />
           <p>
-            Once you've placed your delivery request through Courierse, we immediately begin coordinating the most efficient delivery route based on your pickup and drop-off locations.
+            Once you've placed your delivery request through CourierSe, we immediately begin coordinating the most efficient delivery route based on your pickup and drop-off locations.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const Cards = () => {
             className={styles.icon}
           />
           <p>
-            Courierse vehicles operate on fixed city routes, ensuring efficient deliveries by seamlessly transferring goods between vehicles when needed to cover different segments of the journey.
+            CourierSe vehicles operate on fixed city routes, ensuring efficient deliveries by seamlessly transferring goods between vehicles when needed to cover different segments of the journey.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ const Cards = () => {
                 className={styles.icon}
               />
               <p>
-                At Courierse, we ensure reliable, on-time deliveries by combining efficient teamwork and technology. Owning our fleet allows full control over scheduling, minimizing delays and ensuring fast, safe product deliveries.
+                At CourierSe, we ensure reliable, on-time deliveries by combining efficient teamwork and technology. Owning our fleet allows full control over scheduling, minimizing delays and ensuring fast, safe product deliveries.
               </p>
             </div>
           </>

@@ -1,19 +1,21 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhone, FaMailBulk, FaMailchimp, FaTextHeight, FaEnvelope } from 'react-icons/fa'; // Import icons for social media
-
+import heroImage from '/assets/heroimage.png';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         {/* Logo  */}
         <div className={styles.logoSection}>
- <img
-   src="/assets/Footer/heroimage.png"
-  alt="Order"
+        <img
+  src={heroImage}
+  alt="logo"
   className={styles.logo}
 />
+
           <p className={styles.description}>दाम आधा - काम ज्यादा!</p>
+          <p className={styles.description}>By RAAS Engineers</p>
         </div>
 
         {/* Navigation Section */}
