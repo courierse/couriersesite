@@ -6,6 +6,7 @@ import Cards from './components/Cards/Cards';
 import ContactForm from './components/ContactForm/ContactForm';
 import Faq from './components/Faq/Faq';
 import Footer from './components/Footer/Footer';
+import WhatsAppIcon from './components/Whatsapp/WhatsappButton';
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
       </section>
       <section id="footer">
         <Footer />
+      </section>
+      <section id="footer">
+        <WhatsAppIcon />
       </section>
     </div>
   )
